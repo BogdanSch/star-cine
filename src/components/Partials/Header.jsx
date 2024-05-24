@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="header py-6">
       <div className="container">
-        <nav className="flex flex-row justify-between items-center flex-wrap">
+        <nav className="flex flex-row justify-between items-center flex-wrap fixed w-full top-0 left-0">
           <Logo />
           <ul className="flex flex-row justify-center gap-8 flex-wrap text-white">
             <li>

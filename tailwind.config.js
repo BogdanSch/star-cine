@@ -13,6 +13,10 @@ export default {
       colors: {
         "card-background": "#343434",
         white: "#F9FBFF",
+        accent: "#007FF3",
+        purple: "#7600D3",
+        "purple-dark": "#4d0087",
+        black: "#00040D",
       },
     },
   },
