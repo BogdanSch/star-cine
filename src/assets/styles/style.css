@@ -25,12 +25,7 @@ html {
 }
 
 /* Hero - Start */
-.header {
-  position: relative;
-  /* padding-top: 100px;
-  padding-bottom: 100px; */
-}
-.header::after {
+.hero::after {
   content: "";
   position: absolute;
   display: block;

@@ -8,6 +8,7 @@ import Footer from "./components/partials/Footer";
 import Image from "./components/Image";
 import Logo from "./components/Logo";
 import Button from "./components/Button";
+import LinkButton from "./components/LinkButton";
 import Input from "./components/Input";
 
 import galleryImage1 from "./assets/images/Open-Air-Cinema.jpg";
@@ -20,6 +21,18 @@ function App() {
     <>
       <Header />
       <main className="main">
+        <Section className="hero py-40" id="hero">
+          <div className="text-white flex flex-col gap-y-8 items-start w-3/6">
+            <h1 className="text-6xl font-bold">
+              Кінотеатр просто неба: "Star Cine"
+            </h1>
+            <p className="text-2xl font-thin">
+              Ласкаво просимо до нашого кінотеатру під відкритим небом! Пориньте
+              в магію кіносеансів просто неба під зоряним небом.
+            </p>
+            <LinkButton text="Зареєструватися" linkTo="#contacts" />
+          </div>
+        </Section>
         <Section className="about mt-40" id="about">
           <div className="text-white text-center">
             <h2 className="text-4xl font-bold mb-8">Про кінотеатр</h2>
