@@ -3,9 +3,9 @@ import Logo from "../Logo";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-footer-bg mt-40 py-8">
+    <footer className="footer bg-footer-bg mt-40 py-9">
       <div className="container text-white">
-        <div className="flex flex-row gap-x-10 mb-4">
+        <div className="flex flex-row gap-x-10 gap-y-6 mb-4 flex-wrap">
           <div className="flex-1">
             <Logo />
             <p className="text-white font-normal text-base mt-2">
@@ -47,8 +47,8 @@ export default function Footer() {
           </nav>
         </div>
         <hr />
-        <div className="flex flex-column justify-center gap-y-5 mt-4">
-          <ul>
+        <div className="flex flex-col justify-center gap-y-5 mt-4">
+          <ul className="flex flex-row justify-center gap-x-5 gap-y-4 flex-wrap">
             <li>
               <a href="https://www.instagram.com/bohsvity_777/">
                 <svg className="w-10 h-10">

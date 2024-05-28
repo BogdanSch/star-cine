@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --black: #00040d;
+  --white: #f9fbff;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -22,6 +27,12 @@ html {
 .main {
   flex: 1;
   justify-content: center;
+}
+/* Header - Start */
+.header.sticky {
+  background-color: var(--white);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 /* Hero - Start */
