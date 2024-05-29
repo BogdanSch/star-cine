@@ -12,7 +12,7 @@ export default function Footer() {
               Where Movies Meet Moonlight.
             </p>
           </div>
-          <div className="">
+          <div>
             <h5 className="text-2xl font-semibold leading-tight">
               Де нас знайти
             </h5>
@@ -21,27 +21,66 @@ export default function Footer() {
               <li>6001</li>
               <li>Хaрків</li>
               <li>Україна</li>
-              <li>bogsvity@gmail.com</li>
-              <li>+380 123 456 789</li>
+              <li>
+                <a
+                  href="mailto:bogsvity@gmail.com"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-accent"
+                >
+                  bogsvity@gmail.com
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+380123456789"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-accent"
+                >
+                  +380 123 456 789
+                </a>
+              </li>
             </ul>
           </div>
-          <nav className="">
+          <nav>
             <h5 className="text-2xl font-semibold leading-tight">Посилання</h5>
-            <ul className="list-none">
+            <ul className="list-none transition-all ">
               <li>
-                <a href="/">Головна</a>
+                <a
+                  href="/"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
+                >
+                  Головна
+                </a>
               </li>
               <li>
-                <a href="#about">Про кінотеатр</a>
+                <a
+                  href="#about"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
+                >
+                  Про кінотеатр
+                </a>
               </li>
               <li>
-                <a href="#schedule">Розклад</a>
+                <a
+                  href="#schedule"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
+                >
+                  Розклад
+                </a>
               </li>
               <li>
-                <a href="#gallery">Галерея</a>
+                <a
+                  href="#gallery"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
+                >
+                  Галерея
+                </a>
               </li>
               <li>
-                <a href="#contacts">Контакти</a>
+                <a
+                  href="#contacts"
+                  className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
+                >
+                  Контакти
+                </a>
               </li>
             </ul>
           </nav>

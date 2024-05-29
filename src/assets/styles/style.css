@@ -16,6 +16,7 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 80px;
 }
 
 .container {
@@ -29,10 +30,25 @@ html {
   justify-content: center;
 }
 /* Header - Start */
+.header {
+  transition: all 0.4s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .header.sticky {
   background-color: var(--white);
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.header.sticky a {
+  color: var(--black);
+}
+
+.header.sticky a.accent {
+  color: var(--white);
 }
 
 /* Hero - Start */
@@ -45,7 +61,7 @@ html {
   right: 0;
   width: 45%;
   height: 100%;
-  z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
+  z-index: -1;
 }

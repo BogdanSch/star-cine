@@ -1,11 +1,29 @@
 import React from "react";
+import { useEffect } from "react";
 
 import Logo from "../Logo";
-import LinkButton from "../LinkButton";
 
 export default function Header() {
+  useEffect(() => {
+    const header = document.querySelector(".header");
+
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+    if (header) {
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      console.error("Header element not found");
+    }
+  }, []);
   return (
-    <header className="header fixed w-full top-0 left-0 py-4">
+    <header className="header py-4">
       <div className="container">
         <nav className="flex flex-row justify-between items-center flex-wrap">
           <Logo />
@@ -31,7 +49,10 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#contacts" className="bg-blue-500 px-4 py-3 text-white">
+              <a
+                href="#contacts"
+                className="bg-blue-500 px-4 py-3 text-white accent"
+              >
                 Контакти
               </a>
             </li>
