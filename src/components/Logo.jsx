@@ -6,7 +6,7 @@ export default function Logo() {
       <svg className="w-10 h-10">
         <use xlinkHref="#logoIcon"></use>
       </svg>
-      <a className="font-medium text-2xl text-white" href="/">
+      <a className="font-bold text-2xl text-white" href="/">
         StarCine
       </a>
     </div>

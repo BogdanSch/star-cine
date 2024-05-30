@@ -61,18 +61,34 @@ function App() {
               в магію кіносеансів просто неба під зоряним небом.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-4 gap-4">
+          <div className="mt-10 grid grid-cols-4 gap-2">
             <div className="p-0 m-0">
-              <Image src={galleryImage1} alt="Open Air Cinema Image" />
+              <Image
+                src={galleryImage1}
+                alt="Open Air Cinema Image"
+                animate={true}
+              />
             </div>
             <div className="p-0 m-0">
-              <Image src={galleryImage2} alt="Open Air Cinema Image" />
+              <Image
+                src={galleryImage2}
+                alt="Open Air Cinema Image"
+                animate={true}
+              />
             </div>
             <div className="p-0 m-0">
-              <Image src={galleryImage3} alt="Open Air Cinema Image" />
+              <Image
+                src={galleryImage3}
+                alt="Open Air Cinema Image"
+                animate={true}
+              />
             </div>
             <div className="p-0 m-0">
-              <Image src={galleryImage4} alt="Open Air Cinema Image" />
+              <Image
+                src={galleryImage4}
+                alt="Open Air Cinema Image"
+                animate={true}
+              />
             </div>
           </div>
         </Section>

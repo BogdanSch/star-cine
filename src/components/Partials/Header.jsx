@@ -9,9 +9,9 @@ export default function Header() {
 
     function handleScroll() {
       if (window.scrollY > 0) {
-        header.classList.add("sticky");
+        header.classList.add("header-sticky");
       } else {
-        header.classList.remove("sticky");
+        header.classList.remove("header-sticky");
       }
     }
 
@@ -23,7 +23,7 @@ export default function Header() {
     }
   }, []);
   return (
-    <header className="header py-4">
+    <header className="header py-4 fixed top-0 left-0 w-full transition-all duration-[400ms] z-[100000]">
       <div className="container">
         <nav className="flex flex-row justify-between items-center flex-wrap">
           <Logo />

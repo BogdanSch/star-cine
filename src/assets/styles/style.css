@@ -5,6 +5,7 @@
 :root {
   --black: #00040d;
   --white: #f9fbff;
+  --section-bg: #242424;
 }
 
 html {
@@ -30,27 +31,11 @@ html {
   justify-content: center;
 }
 /* Header - Start */
-.header {
-  transition: all 0.4s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-.header.sticky {
-  background-color: var(--white);
+.header.header-sticky {
+  background-color: var(--section-bg);
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
-.header.sticky a {
-  color: var(--black);
-}
-
-.header.sticky a.accent {
-  color: var(--white);
-}
-
 /* Hero - Start */
 .hero::after {
   content: "";
