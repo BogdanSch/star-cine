@@ -1,7 +1,7 @@
 import React from "react";
 
-import Image from "../Image.jsx";
-import CardImage from "../../assets/images/Spectators-With-Popcorn.jpg";
+import Image from "./Image.jsx";
+import CardImage from "../assets/images/Spectators-With-Popcorn.jpg";
 
 export default function MovieCard(props) {
   return (

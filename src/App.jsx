@@ -1,15 +1,14 @@
 import React from "react";
 
-import Section from "./components/Section";
-import MovieCard from "./components/partials/MovieCard";
-
 import Header from "./components/partials/Header";
 import Footer from "./components/partials/Footer";
+
+import Section from "./components/Section";
+import MovieCard from "./components/MovieCard";
+import ContactForm from "./components/ContactForm";
 import Image from "./components/Image";
 import Logo from "./components/Logo";
-import Button from "./components/Button";
 import LinkButton from "./components/LinkButton";
-import Input from "./components/Input";
 
 import galleryImage1 from "./assets/images/Open-Air-Cinema.jpg";
 import galleryImage2 from "./assets/images/Open-air-cinema-people.jpg";
@@ -120,41 +119,7 @@ function App() {
               <h5 className="text-2xl font-semibold leading-tight">
                 Реєстрація
               </h5>
-              <form action="" className="mt-12">
-                <div className="mb-6 flex flex-row gap-x-4 flex-wrap">
-                  <Input
-                    type="text"
-                    name="firstName"
-                    placeholder="Ім’я"
-                    id="firstNameInput"
-                  />
-                  <Input
-                    type="text"
-                    name="lastName"
-                    placeholder="Прізвище"
-                    id="lastNameInput"
-                  />
-                </div>
-                <div className="mb-6">
-                  <Input
-                    type="email"
-                    name="email"
-                    id="emailInput"
-                    placeholder="Електронна пошта"
-                    className="w-full"
-                  />
-                </div>
-                <div className="mb-6">
-                  <Input
-                    type="text"
-                    name="phoneNumber"
-                    id="phoneNumberInput"
-                    placeholder="Номер телефону"
-                    className="w-full"
-                  />
-                </div>
-                <Button text="Зареєструватися" type="submit" />
-              </form>
+              <ContactForm />
             </div>
           </div>
         </Section>
