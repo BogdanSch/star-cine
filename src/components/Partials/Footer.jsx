@@ -1,9 +1,11 @@
 import React from "react";
+
 import Logo from "../Logo";
+import ContactsList from "../contacts/ContactsList";
 
 export default function Footer() {
   return (
-    <footer className="footer bg-footer-bg mt-40 py-9">
+    <footer className="footer bg-section-bg mt-40 py-9">
       <div className="container text-white">
         <div className="flex flex-row gap-x-10 gap-y-6 mb-4 flex-wrap">
           <div className="flex-1">
@@ -16,28 +18,7 @@ export default function Footer() {
             <h5 className="text-2xl font-semibold leading-tight">
               Де нас знайти
             </h5>
-            <ul className="list-none">
-              <li>Сумська, 47</li>
-              <li>6001</li>
-              <li>Хaрків</li>
-              <li>Україна</li>
-              <li>
-                <a
-                  href="mailto:bogsvity@gmail.com"
-                  className="transition-all duration-500 ease-linear hover:underline hover:text-accent"
-                >
-                  bogsvity@gmail.com
-                </a>
-              </li>
-              <li>
-                <a
-                  href="tel:+380123456789"
-                  className="transition-all duration-500 ease-linear hover:underline hover:text-accent"
-                >
-                  +380 123 456 789
-                </a>
-              </li>
-            </ul>
+            <ContactsList />
           </div>
           <nav>
             <h5 className="text-2xl font-semibold leading-tight">Посилання</h5>
@@ -60,10 +41,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#schedule"
+                  href="#movies"
                   className="transition-all duration-500 ease-linear hover:underline hover:text-gray-300"
                 >
-                  Розклад
+                  Фільми
                 </a>
               </li>
               <li>
@@ -88,42 +69,42 @@ export default function Footer() {
         <hr />
         <div className="flex flex-col justify-center gap-y-5 mt-4">
           <ul className="flex flex-row justify-center gap-x-5 gap-y-4 flex-wrap">
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://www.instagram.com/bohsvity_777/">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#instagramIcon"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://www.facebook.com/profile.php?id=100027446175865">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#facebookIcon"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://t.me/+voC6fujFeLE4ZDQy">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#telegramIcon"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://youtube.com/@ro-creator?si=0uQflSIg5MkF0Q1c">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#youtubeIcon"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://github.com/BogdanSch">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#githubIcon"></use>
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="transition-all duration-500 hover:translate-y-[-4px]">
               <a href="https://www.figma.com/@bogsvity">
                 <svg className="w-10 h-10">
                   <use xlinkHref="#figmaIcon"></use>

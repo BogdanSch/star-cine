@@ -17,7 +17,7 @@ export default {
         purple: "#7600D3",
         "purple-dark": "#4d0087",
         black: "#00040D",
-        "footer-bg": "#181818",
+        "section-bg": "#181818",
       },
       backgroundImage: {
         "hero-pattern": "url('/img/hero-pattern.svg')",

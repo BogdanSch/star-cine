@@ -4,11 +4,12 @@ import Header from "./components/partials/Header";
 import Footer from "./components/partials/Footer";
 
 import Section from "./components/Section";
-import MovieCard from "./components/MovieCard";
-import ContactForm from "./components/ContactForm";
-import Image from "./components/Image";
+import ContactForm from "./components/contacts/ContactForm";
+import ContactsList from "./components/contacts/ContactsList";
 import Logo from "./components/Logo";
 import LinkButton from "./components/LinkButton";
+import ImagesGallery from "./components/ImagesGallery";
+import Movies from "./components/Movies";
 
 import galleryImage1 from "./assets/images/Open-Air-Cinema.jpg";
 import galleryImage2 from "./assets/images/Open-air-cinema-people.jpg";
@@ -41,17 +42,7 @@ function App() {
             </p>
           </div>
         </Section>
-        <Section className="schedule mt-40 text-white" id="schedule">
-          <h2 className="text-center text-4xl font-bold mb-8">Наш розклад</h2>
-          <div className="flex flex-row gap-x-6 gap-y-4 flex-wrap justify-center">
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-            <MovieCard />
-          </div>
-        </Section>
+        <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">
           <div className="text-white text-center">
             <h2 className="text-4xl font-bold mb-8">Галерея</h2>
@@ -60,36 +51,14 @@ function App() {
               в магію кіносеансів просто неба під зоряним небом.
             </p>
           </div>
-          <div className="mt-10 grid grid-cols-4 gap-2">
-            <div className="p-0 m-0">
-              <Image
-                src={galleryImage1}
-                alt="Open Air Cinema Image"
-                animate={true}
-              />
-            </div>
-            <div className="p-0 m-0">
-              <Image
-                src={galleryImage2}
-                alt="Open Air Cinema Image"
-                animate={true}
-              />
-            </div>
-            <div className="p-0 m-0">
-              <Image
-                src={galleryImage3}
-                alt="Open Air Cinema Image"
-                animate={true}
-              />
-            </div>
-            <div className="p-0 m-0">
-              <Image
-                src={galleryImage4}
-                alt="Open Air Cinema Image"
-                animate={true}
-              />
-            </div>
-          </div>
+          <ImagesGallery
+            images={[
+              galleryImage1,
+              galleryImage2,
+              galleryImage3,
+              galleryImage4,
+            ]}
+          />
         </Section>
         <Section className="contacts mt-40 text-white" id="contacts">
           <div className="text-white text-center">
@@ -106,14 +75,8 @@ function App() {
             <div className="flex flex-col gap-y-4">
               <h5 className="text-2xl font-semibold leading-tight">Контакти</h5>
               <Logo />
-              <ul className="list-none">
-                <li>Сумська, 47</li>
-                <li>6001</li>
-                <li>Хaрків</li>
-                <li>Україна</li>
-                <li>bogsvity@gmail.com</li>
-                <li>+380 123 456 789</li>
-              </ul>
+              <ContactsList />
+              {/*  */}
             </div>
             <div className="flex flex-col rounded-lg bg-transparent px-11 py-16 border-4 border-accent ">
               <h5 className="text-2xl font-semibold leading-tight">

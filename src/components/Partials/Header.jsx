@@ -27,7 +27,7 @@ export default function Header() {
       <div className="container">
         <nav className="flex flex-row justify-between items-center flex-wrap">
           <Logo />
-          <ul className="flex flex-row justify-center gap-8 flex-wrap text-white">
+          <ul className="flex flex-row justify-center items-center gap-8 flex-wrap text-white">
             <li>
               <a href="/" className="p-0 m-0">
                 Головна
@@ -39,8 +39,8 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#schedule" className="p-0 m-0">
-                Розклад
+              <a href="#movies" className="p-0 m-0">
+                Фільми
               </a>
             </li>
             <li>
@@ -49,9 +49,10 @@ export default function Header() {
               </a>
             </li>
             <li>
+              {/* <LinkButton linkTo="#contacts" text="Контакти" /> */}
               <a
                 href="#contacts"
-                className="bg-blue-500 px-4 py-3 text-white accent"
+                className="transition-all duration-700 bg-blue-500 px-4 py-3 text-white accent hover:bg-purple-dark hover:translate-y-[-2px]"
               >
                 Контакти
               </a>
