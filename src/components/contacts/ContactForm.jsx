@@ -5,7 +5,7 @@ import Modal from "../modals/Modal";
 import Input from "../Input";
 import Button from "../Button";
 
-const MAX_AMOUNT_LETTERS_FOR_INPUT = 4;
+const MAX_AMOUNT_LETTERS_FOR_INPUT = 2;
 const CONTACT_API_URL = "https://sheetdb.io/api/v1/mh27ctov5fb2k";
 
 export default function ContactForm() {

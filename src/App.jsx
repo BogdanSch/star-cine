@@ -9,7 +9,7 @@ import ContactsList from "./components/contacts/ContactsList";
 import Logo from "./components/Logo";
 import LinkButton from "./components/LinkButton";
 import ImagesGallery from "./components/ImagesGallery";
-import Movies from "./components/Movies";
+import Movies from "./components/movies/Movies";
 
 import galleryImage1 from "./assets/images/Open-Air-Cinema.jpg";
 import galleryImage2 from "./assets/images/Open-air-cinema-people.jpg";
@@ -41,6 +41,7 @@ function App() {
               в магію кіносеансів просто неба під зоряним небом.
             </p>
           </div>
+          
         </Section>
         <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">
