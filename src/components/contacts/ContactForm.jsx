@@ -6,21 +6,20 @@ import Input from "../Input";
 import Button from "../Button";
 
 const MAX_AMOUNT_LETTERS_FOR_INPUT = 2;
-const CONTACT_API_URL = "https://sheetdb.io/api/v1/mh27ctov5fb2k";
+const VITE_SHEET_DB_API = import.meta.env.VITE_SHEET_DB_API;
+
+const isFormValid = (form) => {
+  if (form.firstName.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT) return false;
+  if (form.lastName.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT) return false;
+  if (form.email.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT) return false;
+  if (form.phoneNumber.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT)
+    return false;
+  return true;
+};
 
 export default function ContactForm() {
   const [showConfirmModal, setShowConfirmModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
-
-  const isFormValid = (form) => {
-    if (form.firstName.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT)
-      return false;
-    if (form.lastName.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT) return false;
-    if (form.email.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT) return false;
-    if (form.phoneNumber.value.length < MAX_AMOUNT_LETTERS_FOR_INPUT)
-      return false;
-    return true;
-  };
 
   const handleContactFormSubmit = (event) => {
     event.preventDefault();
@@ -61,7 +60,7 @@ export default function ContactForm() {
   return (
     <>
       <form
-        action={CONTACT_API_URL}
+        action={VITE_SHEET_DB_API}
         className="mt-12"
         onSubmit={handleContactFormSubmit}
         method="post"

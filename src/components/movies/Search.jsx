@@ -1,17 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
-// import process from "dotenv";
-// require("dotenv").config();
 
-import searchIcon from "../assets/images/icons/search.svg";
+import searchIcon from "../../assets/images/icons/search.svg";
 
-const MOVIE_OMDB_API_KEY = import.meta.env.MOVIE_OMDB_API_KEY;
+const VITE_MOVIE_OMDB_API_KEY = import.meta.env.VITE_MOVIE_OMDB_API_KEY;
 
 export default function Search(props) {
   const [searchTerm, setSearchTerm] = useState("Star Wars");
 
   const searchMovies = async (movieTitle) => {
-    const response = await fetch(`${MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
+    console.log(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
+    const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
     const data = await response.json();
     props.setMovies(data.Search);
   };
@@ -21,14 +20,15 @@ export default function Search(props) {
   }, []);
 
   return (
-    <div className="search">
+    <div className="flex flex-row justify-center items-center px-5 py-4 w-[50%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
       <input
+        className="flex-1 border-none font-semibold pr-6 outline-none bg-dark text-grey font-raleway"
         placeholder="Search for movies?"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
       />
       <img
-        className="searchButton"
+        className="w-[31px] h-[31px] cursor-pointer"
         src={searchIcon}
         alt="Search Icon"
         onClick={() => searchMovies(searchTerm)}

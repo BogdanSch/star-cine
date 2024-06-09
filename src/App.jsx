@@ -4,12 +4,14 @@ import Header from "./components/partials/Header";
 import Footer from "./components/partials/Footer";
 
 import Section from "./components/Section";
-import ContactForm from "./components/contacts/ContactForm";
 import ContactsList from "./components/contacts/ContactsList";
 import Logo from "./components/Logo";
 import LinkButton from "./components/LinkButton";
+
+// import Carousel from "./components/carousel/Carousel";
 import ImagesGallery from "./components/ImagesGallery";
 import Movies from "./components/movies/Movies";
+import ContactForm from "./components/contacts/ContactForm";
 
 import galleryImage1 from "./assets/images/Open-Air-Cinema.jpg";
 import galleryImage2 from "./assets/images/Open-air-cinema-people.jpg";
@@ -41,7 +43,7 @@ function App() {
               в магію кіносеансів просто неба під зоряним небом.
             </p>
           </div>
-          
+          {/* <Carousel /> */}
         </Section>
         <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">
