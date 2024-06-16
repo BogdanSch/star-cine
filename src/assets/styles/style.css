@@ -50,3 +50,7 @@ html {
   background-size: cover;
   z-index: -1;
 }
+/* About - Start */
+.slick-slide > div {
+  margin: 0 auto;
+}

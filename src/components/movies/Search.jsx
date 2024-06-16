@@ -26,6 +26,10 @@ export default function Search(props) {
         placeholder="Search for movies?"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
+        onKeyDown={(event) => {
+          if (event.key.toLocaleLowerCase() === "enter")
+            setSearchTerm(event.target.value);
+        }}
       />
       <img
         className="w-[31px] h-[31px] cursor-pointer"

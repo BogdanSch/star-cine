@@ -17,7 +17,7 @@ export default function Movies() {
           movies.map((movie) => <MovieCard movie={movie} />)
         ) : (
           <div className="text-lg font-semibold">
-            <h2>Вибаємося, таких фільмів в нас ще немає на показі...</h2>
+            <h2>Вибачємося, але таких фільмів на показі в нас ще немає...</h2>
           </div>
         )}
       </div>
