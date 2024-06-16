@@ -14,7 +14,7 @@ export default function Movies() {
       <Search setMovies={setMovies} />
       <div className="flex flex-row gap-x-6 gap-y-4 flex-wrap justify-center">
         {movies?.length > 0 ? (
-          movies.map((movie) => <MovieCard movie={movie} />)
+          movies.map((movie) => <MovieCard movie={movie} key={movie.imdbID} />)
         ) : (
           <div className="text-lg font-semibold">
             <h2>Вибачємося, але таких фільмів на показі в нас ще немає...</h2>

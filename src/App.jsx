@@ -8,7 +8,7 @@ import ContactsList from "./components/contacts/ContactsList";
 import Logo from "./components/Logo";
 import LinkButton from "./components/LinkButton";
 
-// import Carousel from "./components/carousel/Carousel";
+import Carousel from "./components/carousel/Carousel";
 import ImagesGallery from "./components/ImagesGallery";
 import Movies from "./components/movies/Movies";
 import ContactForm from "./components/contacts/ContactForm";
@@ -43,7 +43,7 @@ function App() {
               в магію кіносеансів просто неба під зоряним небом.
             </p>
           </div>
-          {/* <Carousel /> */}
+          <Carousel />
         </Section>
         <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">

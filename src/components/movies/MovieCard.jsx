@@ -2,11 +2,11 @@ import React from "react";
 
 import Image from "../Image.jsx";
 
-export default function MovieCard({ movie }) {
+export default function MovieCard({ movie, key }) {
   return (
     <div
       className="rounded-lg bg-card-background w-64 transition-all duration-[600ms] hover:scale-95"
-      key={`movie-${movie.key}`}
+      key={`movie-${key}`}
     >
       <Image
         className="w-full"
@@ -20,6 +20,7 @@ export default function MovieCard({ movie }) {
       />
       <div className="mt-6 px-5 pb-6 text-center">
         <h3 className="mb-7 text-2xl font-semibold">{movie.Title}</h3>
+        <span>Рік випуску: {movie.Year}</span>
         <p>
           Коли: Субота Опис: Фільм суботи - це космічна пригода, яка не має собі
           рівних. Приєднуйтесь до групи несподіваних героїв, які рятують всесвіт

@@ -23,12 +23,12 @@ const sliderSettings = {
 
 export default function Carousel() {
   return (
-    <div className="w-3/4 mx-auto">
-      <div className="mt-20">
+    <div className="w-full mx-auto">
+      <div className="mt-20 px-4">
         <Slider {...sliderSettings}>
           {images.map((image, index) => {
             return (
-              <div className="h-[450px]">
+              <div className="h-[160px]" key={`carousel-${index}`}>
                 <Image className="w-full" src={image} alt={`image ${index}`} />
               </div>
             );
