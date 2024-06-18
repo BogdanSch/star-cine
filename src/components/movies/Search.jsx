@@ -2,18 +2,19 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 import searchIcon from "../../assets/images/icons/search.svg";
+import { searchMovies } from "../../utils/searchMovies";
 
-const VITE_MOVIE_OMDB_API_KEY = import.meta.env.VITE_MOVIE_OMDB_API_KEY;
+// const VITE_MOVIE_OMDB_API_KEY = import.meta.env.VITE_MOVIE_OMDB_API_KEY;
 
 export default function Search(props) {
   const [searchTerm, setSearchTerm] = useState("Star Wars");
 
-  const searchMovies = async (movieTitle) => {
-    console.log(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
-    const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
-    const data = await response.json();
-    props.setMovies(data.Search);
-  };
+  // const searchMovies = async (movieTitle) => {
+  //   console.log(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
+  //   const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
+  //   const data = await response.json();
+  //   props.setMovies(data.Search);
+  // };
 
   useEffect(() => {
     searchMovies(searchTerm);
