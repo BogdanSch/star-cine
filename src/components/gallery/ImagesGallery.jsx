@@ -1,6 +1,6 @@
 import React from "react";
 
-import Image from "./Image";
+import Image from "../Image";
 
 export default function ImagesGallery(props) {
   return (
@@ -11,6 +11,7 @@ export default function ImagesGallery(props) {
             <Image
               src={image}
               alt={`Open Air Cinema Gallery Image ${index}`}
+              className=""
               animate={true}
             />
           </div>

@@ -21,7 +21,7 @@ export default function Search(props) {
   }, []);
 
   return (
-    <div className="flex flex-row justify-center items-center px-5 py-4 w-[50%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
+    <div className="flex flex-row justify-center items-center px-5 py-4 sm:w-[50%] w-[100%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
       <input
         className="flex-1 border-none font-semibold pr-6 outline-none bg-dark text-grey font-raleway"
         placeholder="Search for movies?"

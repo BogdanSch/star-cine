@@ -29,7 +29,12 @@ export default function Carousel() {
           {images.map((image, index) => {
             return (
               <div className="h-[160px]" key={`carousel-${index}`}>
-                <Image className="w-full" src={image} alt={`image ${index}`} />
+                <Image
+                  className="w-full "
+                  src={image}
+                  alt={`image ${index}`}
+                  animate={true}
+                />
               </div>
             );
           })}

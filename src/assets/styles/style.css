@@ -44,11 +44,17 @@ html {
   background: url("../images/Cinema-with-popcorn-box-and-3d-glasses.jpg");
   top: 0;
   right: 0;
-  width: 45%;
-  height: 100%;
+  width: 50%;
+  height: 100% !important;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  .hero::after {
+    width: 100%;
+  }
 }
 /* About - Start */
 /* .slick-slider{

@@ -9,7 +9,7 @@ import Logo from "./components/Logo";
 import LinkButton from "./components/LinkButton";
 
 import Carousel from "./components/carousel/Carousel";
-import ImagesGallery from "./components/ImagesGallery";
+import ImagesGallery from "./components/gallery/ImagesGallery";
 import Movies from "./components/movies/Movies";
 import ContactForm from "./components/contacts/ContactForm";
 
@@ -23,8 +23,8 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <Section className="hero py-40" id="hero">
-          <div className="text-white flex flex-col gap-y-8 items-start w-3/6">
+        <Section className="hero" id="hero">
+          <div className="text-white flex flex-col gap-y-8 items-start w-3/6 py-40">
             <h1 className="text-6xl font-bold">
               Кінотеатр просто неба: "Star Cine"
             </h1>
