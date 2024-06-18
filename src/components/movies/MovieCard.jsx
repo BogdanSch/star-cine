@@ -2,11 +2,11 @@ import React from "react";
 
 import Image from "../Image.jsx";
 
-export default function MovieCard({ movie, key }) {
+export default function MovieCard({ movie }) {
   return (
     <div
       className="rounded-lg bg-card-background w-64 transition-all duration-[600ms] hover:scale-95"
-      key={`movie-${key}`}
+      id={`movie-${movie.imdbID}`}
     >
       <Image
         className="w-full"

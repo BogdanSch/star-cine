@@ -17,7 +17,7 @@ export default function Search(props) {
   // };
 
   useEffect(() => {
-    searchMovies(searchTerm);
+    searchMovies(searchTerm, props.setMovies);
   }, []);
 
   return (
@@ -36,7 +36,7 @@ export default function Search(props) {
         className="w-[31px] h-[31px] cursor-pointer"
         src={searchIcon}
         alt="Search Icon"
-        onClick={() => searchMovies(searchTerm)}
+        onClick={() => searchMovies(searchTerm, props.setMovies)}
       />
     </div>
   );

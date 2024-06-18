@@ -2,6 +2,14 @@ import React from "react";
 
 import Logo from "../Logo";
 import ContactsList from "../contacts/ContactsList";
+import Image from "../Image";
+
+import instagramIcon from "../../assets/images/icons/instagram.svg";
+import facebookIcon from "../../assets/images/icons/facebook.svg";
+import telegramIcon from "../../assets/images/icons/telegram.svg";
+import youtubeIcon from "../../assets/images/icons/youtube.svg";
+import githubIcon from "../../assets/images/icons/github.svg";
+import figmaIcon from "../../assets/images/icons/figma.svg";
 
 export default function Footer() {
   return (
@@ -70,45 +78,63 @@ export default function Footer() {
         <div className="flex flex-col justify-center gap-y-5 mt-4">
           <ul className="flex flex-row justify-center gap-x-5 gap-y-4 flex-wrap">
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://www.instagram.com/bohsvity_777/">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#instagramIcon"></use>
-                </svg>
+              <a href="https://www.instagram.com/bohsvity_777/" target="_blank">
+                <Image
+                  className="w-10 h-10"
+                  src={instagramIcon}
+                  alt="Instagram Logo Icon Footer Link"
+                />
               </a>
             </li>
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://www.facebook.com/profile.php?id=100027446175865">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#facebookIcon"></use>
-                </svg>
+              <a
+                href="https://www.facebook.com/profile.php?id=100027446175865"
+                target="_blank"
+              >
+                <Image
+                  className="w-10 h-10"
+                  src={facebookIcon}
+                  alt="Facebook Logo Icon Footer Link"
+                />
               </a>
             </li>
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://t.me/+voC6fujFeLE4ZDQy">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#telegramIcon"></use>
-                </svg>
+              <a href="https://t.me/+voC6fujFeLE4ZDQy" target="_blank">
+                <Image
+                  className="w-10 h-10"
+                  src={telegramIcon}
+                  alt="Telegram Logo Icon Footer Link"
+                />
               </a>
             </li>
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://youtube.com/@ro-creator?si=0uQflSIg5MkF0Q1c">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#youtubeIcon"></use>
-                </svg>
+              <a
+                href="https://youtube.com/@ro-creator?si=0uQflSIg5MkF0Q1c"
+                target="_blank"
+              >
+                <Image
+                  className="w-10 h-10"
+                  src={youtubeIcon}
+                  alt="YouTube Logo Icon Footer Link"
+                />
               </a>
             </li>
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://github.com/BogdanSch">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#githubIcon"></use>
-                </svg>
+              <a href="https://github.com/BogdanSch" target="_blank">
+                <Image
+                  className="w-10 h-10"
+                  src={githubIcon}
+                  alt="Github Logo Icon Footer Link"
+                />
               </a>
             </li>
             <li className="transition-all duration-500 hover:translate-y-[-4px]">
-              <a href="https://www.figma.com/@bogsvity">
-                <svg className="w-10 h-10">
-                  <use xlinkHref="#figmaIcon"></use>
-                </svg>
+              <a href="https://www.figma.com/@bogsvity" target="_blank">
+                <Image
+                  className="w-10 h-10"
+                  src={figmaIcon}
+                  alt="Figma Logo Icon Footer Link"
+                />
               </a>
             </li>
           </ul>
