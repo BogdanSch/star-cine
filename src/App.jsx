@@ -74,14 +74,13 @@ function App() {
               учасником цієї ексклюзивної зустрічі.
             </p>
           </div>
-          <div className="flex flex-row justify-around items-center mt-12">
+          <div className="flex flex-col gap-y-6 sm:flex-row justify-around items-center mt-12">
             <div className="flex flex-col gap-y-4">
               <h5 className="text-2xl font-semibold leading-tight">Контакти</h5>
               <Logo />
               <ContactsList />
-              {/*  */}
             </div>
-            <div className="flex flex-col rounded-lg bg-transparent px-11 py-16 border-4 border-accent ">
+            <div className="flex flex-col rounded-lg bg-transparent px-11 py-16 border-4 border-accent">
               <h5 className="text-2xl font-semibold leading-tight">
                 Реєстрація
               </h5>

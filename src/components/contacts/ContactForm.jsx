@@ -65,7 +65,7 @@ export default function ContactForm() {
         onSubmit={handleContactFormSubmit}
         method="post"
       >
-        <div className="mb-6 flex flex-row gap-x-4 flex-wrap">
+        <div className="mb-6 flex flex-row gap-x-4 gap-y-4 flex-wrap">
           <Input
             type="text"
             name="firstName"
