@@ -35,15 +35,17 @@ function App() {
             <LinkButton text="Зареєструватися" linkTo="#contacts" />
           </div>
         </Section>
-        <Section className="about mt-40" id="about">
-          <div className="text-white text-center">
+        <Section className="about mt-40 text-white" id="about">
+          <div className="text-center">
             <h2 className="text-4xl font-bold mb-8">Про кінотеатр</h2>
             <p className="text-2xl font-normal">
-              Ласкаво просимо до нашого кінотеатру під відкритим небом! Пориньте
-              в магію кіносеансів просто неба під зоряним небом.
+              У нашому кінотеатрі просто неба ми вже багато років створюємо
+              незабутні враження від кіно. Наша пристрасть до кіно та відпочинку
+              на природі надихнула нас об’єднати ці два ріні світи.
             </p>
           </div>
           <Carousel />
+          <p className="text-2xl font-normal text-center mt-5">Наші надзвичайні робітники</p>
         </Section>
         <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">
