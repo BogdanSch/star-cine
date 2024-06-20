@@ -1,12 +1,8 @@
+@import "./colors.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --black: #00040d;
-  --white: #f9fbff;
-  --section-bg: #242424;
-}
 
 html {
   scroll-behavior: smooth;
@@ -21,7 +17,7 @@ body.lock {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 
 .container {
@@ -36,12 +32,12 @@ body.lock {
 }
 /* Header - Start */
 .header.header-sticky {
-  background-color: var(--section-bg);
+  background-color: var(--color-section-bg);
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 770px) {
   .header__burger {
     display: block;
     width: 30px;
@@ -49,10 +45,10 @@ body.lock {
     position: relative;
     z-index: 3;
   }
-  
+
   .header__burger::before {
     content: "";
-    background-color: white; /* Replace $white with actual color */
+    background-color: var(--color-white); /* Replace $white with actual color */
     width: 100%;
     height: 3px;
     position: absolute;
@@ -60,10 +56,10 @@ body.lock {
     transition: all 0.5s ease;
     top: 0;
   }
-  
+
   .header__burger::after {
     content: "";
-    background-color: white; /* Replace $white with actual color */
+    background-color: var(--color-white); /* Replace $white with actual color */
     width: 100%;
     height: 3px;
     position: absolute;
@@ -71,36 +67,36 @@ body.lock {
     transition: all 0.5s ease;
     bottom: 0;
   }
-  
+
   .header__burger span {
     position: absolute;
-    background-color: white; /* Replace $white with actual color */
+    background-color: var(--color-white); /* Replace $white with actual color */
     right: 0;
     width: 70%;
     height: 3px;
     top: 11px;
     transition: all 0.5s ease;
   }
-  
+
   .header__burger.active span {
     display: none;
     transition: all 0.5s ease;
   }
-  
+
   .header__burger.active::before {
     transform: rotate(45deg) scale(1);
     height: 4px;
     top: 10px;
     transition: all 0.5s ease;
   }
-  
+
   .header__burger.active::after {
     transform: rotate(-45deg) scale(1);
     height: 4px;
     bottom: 10px;
     transition: all 0.5s ease;
   }
-  
+
   .header__menu {
     position: fixed;
     top: 150%;
@@ -121,29 +117,25 @@ body.lock {
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
   .header__menu.active {
     top: 84px;
   }
 }
 /* Hero - Start */
-.hero::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background: url("../images/Cinema-with-popcorn-box-and-3d-glasses.jpg");
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100% !important;
-  background-repeat: no-repeat;
+.hero {
+  background-image: url("../images/Cinema-with-popcorn-box-and-3d-glasses.jpg");
+  background-repeat: repeat-y;
   background-size: cover;
-  z-index: -1;
+  background-position: right 0;
+  background-size: 50% !important;
+  min-height: 720px;
 }
 
 @media screen and (max-width: 900px) {
-  .hero::after {
-    width: 100%;
+  .hero {
+    background-size: 100% !important;
+    /* max-height: 460px; */
   }
 }
 /* About - Start */

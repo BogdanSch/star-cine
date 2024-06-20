@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require("tailwindcss/defaultTheme");
+// const defaultTheme = require("tailwindcss/defaultTheme");
 
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -9,7 +9,17 @@ export default {
       center: true,
     },
     screens: {
-      ...defaultTheme.screens,
+      // ...defaultTheme.screens,
+      "2xl": { max: "1535px" },
+      // => @media (max-width: 1535px) { ... }
+      xl: { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+      lg: { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+      md: { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+      sm: { max: "639px" },
+      // => @media (max-width: 639px) { ... }
     },
     extend: {
       fontFamily: {
@@ -17,16 +27,16 @@ export default {
         raleway: ["Raleway", "sans-serif"],
       },
       colors: {
-        "card-background": "#343434",
-        white: "#F9FBFF",
-        "white-transparent": "rgba(249, 251, 255, .7)",
-        grey: "#a1a1a1",
-        accent: "#007FF3",
-        purple: "#7600D3",
-        "purple-dark": "#4d0087",
-        black: "#00040D",
-        dark: "#1f2123",
-        "section-bg": "#181818",
+        "card-background": "var(--color-card-background)",
+        white: "var(--color-white)",
+        "white-transparent": "var(--color-white-transparent)",
+        grey: "var(--color-grey)",
+        accent: "var(--color-accent)",
+        purple: "var(--color-purple)",
+        "purple-dark": "var(--color-purple-dark)",
+        black: "var(--color-black)",
+        dark: "var(--color-dark)",
+        "section-bg": "var(--color-section-bg)",
       },
       backgroundImage: {
         "hero-pattern": "url('/img/hero-pattern.svg')",

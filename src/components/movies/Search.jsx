@@ -21,15 +21,14 @@ export default function Search(props) {
   }, []);
 
   return (
-    <div className="flex flex-row justify-center items-center px-5 py-4 sm:w-[50%] w-[100%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
+    <div className="flex flex-row justify-center items-center px-5 py-4 w-[50%] sm:w-[100%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
       <input
         className="flex-1 border-none font-semibold pr-6 outline-none bg-dark text-grey font-raleway"
         placeholder="Search for movies?"
         value={searchTerm}
         onChange={(event) => setSearchTerm(event.target.value)}
         onKeyDown={(event) => {
-          if (event.key.toLocaleLowerCase() === "enter")
-            setSearchTerm(event.target.value);
+          if (event.key === "Enter") searchMovies(searchTerm, props.setMovies);
         }}
       />
       <img

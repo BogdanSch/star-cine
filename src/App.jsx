@@ -74,7 +74,7 @@ function App() {
               учасником цієї ексклюзивної зустрічі.
             </p>
           </div>
-          <div className="flex flex-col gap-y-6 sm:flex-row justify-around items-center mt-12">
+          <div className="flex flex-row sm:flex-col sm:gap-y-6 justify-around items-center mt-12">
             <div className="flex flex-col gap-y-4">
               <h5 className="text-2xl font-semibold leading-tight">Контакти</h5>
               <Logo />
