@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "./colors.css";
 
 @tailwind base;
@@ -129,7 +130,8 @@ body.lock {
   background-size: cover;
   background-position: right 0;
   background-size: 50% !important;
-  min-height: 720px;
+  min-height: 730px;
+  max-height: 900px;
   filter: brightness(80%);
 }
 

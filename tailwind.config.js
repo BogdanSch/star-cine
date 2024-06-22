@@ -26,6 +26,9 @@ export default {
         montserrat: ["Montserrat", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
       },
+      dropShadow: {
+        "accent": "var(--drop-shadow-accent)",
+      },
       colors: {
         "card-background": "var(--color-card-background)",
         white: "var(--color-white)",

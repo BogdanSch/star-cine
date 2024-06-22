@@ -11,6 +11,8 @@ const images = [
   "/assets/images/carousel/Popcorn.jpg",
   "/assets/images/carousel/Projector.jpg",
   "/assets/images/carousel/Cinema-experience-spectators.jpg",
+  "/assets/images/carousel/thether-hall-perfomance.jpg",
+  "/assets/images/carousel/wonderful-forest.jpg",
 ];
 
 const responsive = {

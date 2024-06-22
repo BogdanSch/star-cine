@@ -4,10 +4,12 @@
   --color-white-transparent: rgba(249, 251, 255, 0.7);
   --color-grey: #a1a1a1;
   --color-accent: #007ff3;
+  --color-accent-transparent: #007ef35d;
   --color-purple: #7600d3;
   --color-purple-dark: #4d0087;
   --color-black: #00040d;
   --color-dark: #1f2123;
   --color-section-bg: #181818;
   --color-section-bg: #242424;
+  --drop-shadow-accent: 3px -6px 60px var(--color-accent-transparent);
 }

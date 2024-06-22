@@ -77,7 +77,7 @@ export default function Footer() {
         <hr />
         <div className="flex flex-col justify-center gap-y-5 mt-4">
           <ul className="flex flex-row justify-center gap-x-5 gap-y-4 flex-wrap">
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a href="https://www.instagram.com/bohsvity_777/" target="_blank">
                 <Image
                   className="w-10 h-10"
@@ -86,7 +86,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a
                 href="https://www.facebook.com/profile.php?id=100027446175865"
                 target="_blank"
@@ -98,7 +98,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a href="https://t.me/+voC6fujFeLE4ZDQy" target="_blank">
                 <Image
                   className="w-10 h-10"
@@ -107,7 +107,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a
                 href="https://youtube.com/@ro-creator?si=0uQflSIg5MkF0Q1c"
                 target="_blank"
@@ -119,7 +119,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a href="https://github.com/BogdanSch" target="_blank">
                 <Image
                   className="w-10 h-10"
@@ -128,7 +128,7 @@ export default function Footer() {
                 />
               </a>
             </li>
-            <li className="transition-all duration-500 hover:translate-y-[-4px]">
+            <li className="transition-all duration-500 hover:translate-y-[-4px] hover:drop-shadow-accent">
               <a href="https://www.figma.com/@bogsvity" target="_blank">
                 <Image
                   className="w-10 h-10"

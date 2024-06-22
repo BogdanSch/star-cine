@@ -24,15 +24,17 @@ function App() {
       <Header />
       <main className="main">
         <Section className="hero" id="hero">
-          <div className="text-white flex flex-col gap-y-8 items-start w-3/6 py-40">
+          <div className="text-white flex flex-col gap-y-8 items-start w-3/6 md:w-full md:text-center py-40">
             <h1 className="text-6xl font-bold">
               Кінотеатр просто неба: "Star Cine"
             </h1>
-            <p className="text-2xl font-thin">
+            <p className="text-2xl font-normal">
               Ласкаво просимо до нашого кінотеатру під відкритим небом! Пориньте
               в магію кіносеансів просто неба під зоряним небом.
             </p>
-            <LinkButton text="Зареєструватися" linkTo="#contacts" />
+            <div className="md:mx-auto">
+              <LinkButton text="Зареєструватися" linkTo="#contacts" />
+            </div>
           </div>
         </Section>
         <Section className="about mt-40 text-white" id="about">
@@ -45,7 +47,9 @@ function App() {
             </p>
           </div>
           <Carousel />
-          <p className="text-2xl font-normal text-center mt-5">Наші надзвичайні робітники</p>
+          <p className="text-2xl font-normal text-center mt-5">
+            Наші надзвичайні робітники
+          </p>
         </Section>
         <Movies />
         <Section className="gallery mt-40 text-white" id="gallery">
