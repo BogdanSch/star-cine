@@ -64,6 +64,7 @@ export default function ContactForm() {
         className="mt-12"
         onSubmit={handleContactFormSubmit}
         method="post"
+        netlify
       >
         <div className="mb-6 flex flex-row gap-x-4 gap-y-4 flex-wrap">
           <Input
