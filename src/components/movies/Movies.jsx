@@ -7,7 +7,6 @@ import Search from "./Search";
 
 export default function Movies() {
   const [movies, setMovies] = useState([]);
-  console.log(movies);
 
   return (
     <Section className="movies mt-40 text-white" id="movies">

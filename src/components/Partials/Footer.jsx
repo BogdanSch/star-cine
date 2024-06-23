@@ -4,12 +4,12 @@ import Logo from "../Logo";
 import ContactsList from "../contacts/ContactsList";
 import Image from "../Image";
 
-import instagramIcon from "../../assets/images/icons/instagram.svg";
-import facebookIcon from "../../assets/images/icons/facebook.svg";
-import telegramIcon from "../../assets/images/icons/telegram.svg";
-import youtubeIcon from "../../assets/images/icons/youtube.svg";
-import githubIcon from "../../assets/images/icons/github.svg";
-import figmaIcon from "../../assets/images/icons/figma.svg";
+import instagramIcon from "../../assets/images/icons/socials/instagram.svg";
+import facebookIcon from "../../assets/images/icons/socials/facebook.svg";
+import telegramIcon from "../../assets/images/icons/socials/telegram.svg";
+import youtubeIcon from "../../assets/images/icons/socials/youtube.svg";
+import githubIcon from "../../assets/images/icons/socials/github.svg";
+import figmaIcon from "../../assets/images/icons/socials/figma.svg";
 
 export default function Footer() {
   return (

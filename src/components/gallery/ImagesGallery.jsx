@@ -4,14 +4,14 @@ import Image from "../Image";
 
 export default function ImagesGallery(props) {
   return (
-    <div className="mt-10 grid grid-cols-4 gap-2">
+    <div className="mt-10 grid grid-cols-4 gap-2 sm:grid-cols-2">
       {props.images.map((image, index) => {
         return (
           <div className="p-0 m-0" key={`imagesGallery-${index}`}>
             <Image
               src={image}
-              alt={`Open Air Cinema Gallery Image ${index}`}
-              className=""
+                alt={`Open Air Cinema Gallery Image ${index}`}
+                className=""
               animate={true}
             />
           </div>

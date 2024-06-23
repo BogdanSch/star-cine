@@ -1,18 +1,27 @@
 import React from "react";
 
 import Image from "../Image";
+
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+import cinemaSeatsImg from "/assets/images/carousel/Cinema-seats.jpg";
+import peopleWatchingImg from "/assets/images/carousel/People-Watching-in-Cinema.jpg";
+import popcornImg from "/assets/images/carousel/Popcorn.jpg";
+import projectorImg from "/assets/images/carousel/Projector.jpg";
+import cinemaExperienceImg from "/assets/images/carousel/Cinema-experience-spectators.jpg";
+import theaterHallImg from "/assets/images/carousel/thether-hall-perfomance.jpg";
+import wonderfulForestImg from "/assets/images/carousel/wonderful-forest.jpg";
+
 const images = [
-  "/assets/images/carousel/Cinema-seats.jpg",
-  "/assets/images/carousel/People-Watching-in-Cinema.jpg",
-  "/assets/images/carousel/Popcorn.jpg",
-  "/assets/images/carousel/Projector.jpg",
-  "/assets/images/carousel/Cinema-experience-spectators.jpg",
-  "/assets/images/carousel/thether-hall-perfomance.jpg",
-  "/assets/images/carousel/wonderful-forest.jpg",
+  cinemaSeatsImg,
+  peopleWatchingImg,
+  popcornImg,
+  projectorImg,
+  cinemaExperienceImg,
+  theaterHallImg,
+  wonderfulForestImg,
 ];
 
 const responsive = {

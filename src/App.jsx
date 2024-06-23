@@ -23,8 +23,11 @@ function App() {
     <>
       <Header />
       <main className="main">
-        <Section className="hero" id="hero">
-          <div className="text-white flex flex-col gap-y-8 items-start w-3/6 md:w-full md:text-center py-40">
+        <Section
+          className="hero flex flex-col justify-center items-start"
+          id="hero"
+        >
+          <div className="text-white flex flex-col gap-y-8 items-start w-3/6 md:w-full md:text-center">
             <h1 className="text-6xl font-bold">
               Кінотеатр просто неба: "Star Cine"
             </h1>

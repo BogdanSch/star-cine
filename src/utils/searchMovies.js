@@ -1,30 +1,33 @@
 const VITE_MOVIE_OMDB_API_KEY = import.meta.env.VITE_MOVIE_OMDB_API_KEY;
 
 const fetchMovieDetails = async (imdbID) => {
-  const response = await fetch(
-    `https://www.omdbapi.com/?apikey=${VITE_MOVIE_OMDB_API_KEY}&i=${imdbID}&plot=short`
-  );
+  const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&i=${imdbID}`);
   const data = await response.json();
   return data;
 };
 
-// const searchMovies = async (movieTitle, setMovies) => {
-//   const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
-//   const data = await response.json();
-//   setMovies(data);
-// if (data.Search) {
-//   const detailedMovies = await Promise.all(
-//     data.Search.map((movie) => fetchMovieDetails(movie.imdbID))
-//   );
-//   setMovies(detailedMovies);
-// }
-// };
+const addAdditionalDataToMovies = async (searchedMovies) => {
+  const movieDetailsPromises = searchedMovies.map(async (movie) => {
+    const movieDetails = await fetchMovieDetails(movie.imdbID);
+    return {
+      ...movie,
+      Plot: movieDetails.Plot,
+    };
+  });
+
+  const moviesWithDetails = await Promise.all(movieDetailsPromises);
+  return moviesWithDetails;
+};
 
 const searchMovies = async (movieTitle, setMovies) => {
-  console.log(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}&plot`);
-  const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
-  const data = await response.json();
-  setMovies(data.Search);
+  try {
+    const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
+    const data = await response.json();
+    const searchedMovies = await addAdditionalDataToMovies(data.Search);
+    setMovies(searchedMovies);
+  } catch (error) {
+    throw new Error("No such a movie was found, try again later!");
+  }
 };
 
 const getRandomFutureDate = () => {

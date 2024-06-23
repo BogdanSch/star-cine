@@ -21,12 +21,15 @@ export default function MovieCard({ movie }) {
       />
       <div className="mt-6 px-5 pb-6 text-center">
         <h3 className="mb-7 text-2xl font-semibold">{movie.Title}</h3>
-        <p>Коротко про сюжет: {movie.Plot}</p>
         <p>
-          Рік випуску: <span className="font-bold">{movie.Year}</span>
+          <span className="font-bold">Коротко про сюжет:</span> {movie.Plot}
+        </p>
+        <p className="mt-4">
+          <span className="font-bold">Рік випуску:</span> {movie.Year}
         </p>
         <p>
-          Коли: <span className="font-bold">{getMovieSchedule()}</span>
+          <span className="font-bold">Коли: </span>
+          {getMovieSchedule()}
         </p>
       </div>
     </div>
