@@ -11,13 +11,16 @@ export default function Modal({ id, show, onHide, modalTitle, modalContent }) {
         modalElement.classList.add("flex");
         modalElement.classList.remove("opacity-0");
         modalElement.classList.add("opacity-100");
+        modalElement.classList.remove("slide-out-animation");
       }, 10);
     } else {
-      modalElement.classList.remove("flex");
+      modalElement.classList.add("slide-out-animation");
+      modalElement.classList.remove("opacity-100");
       modalElement.classList.add("opacity-0");
       setTimeout(() => {
-        modalElement.classList.remove("opacity-100");
+        modalElement.classList.remove("flex");
         modalElement.classList.add("hidden");
+        modalElement.classList.remove("slide-out-animation");
       }, 300);
     }
   }, [id, show]);
@@ -25,7 +28,7 @@ export default function Modal({ id, show, onHide, modalTitle, modalContent }) {
   return (
     <div
       id={id}
-      className="fixed w-full inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ease-out"
+      className="fixed w-full inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-50 transition-all duration-300 ease-out"
       aria-labelledby={`${id}Title`}
       aria-hidden="true"
       ref={modalElementRef}
