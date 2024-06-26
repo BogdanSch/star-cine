@@ -9,14 +9,15 @@ export default function Modal({ id, show, onHide, modalTitle, modalContent }) {
       modalElement.classList.remove("hidden");
       setTimeout(() => {
         modalElement.classList.add("flex");
-        modalElement.classList.remove("opacity-0");
         modalElement.classList.add("opacity-100");
         modalElement.classList.remove("slide-out-animation");
       }, 10);
     } else {
       modalElement.classList.add("slide-out-animation");
-      modalElement.classList.remove("opacity-100");
       modalElement.classList.add("opacity-0");
+      setTimeout(() => {
+        modalElement.classList.remove("opacity-100");
+      }, 100);
       setTimeout(() => {
         modalElement.classList.remove("flex");
         modalElement.classList.add("hidden");
