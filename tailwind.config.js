@@ -40,7 +40,7 @@ export default {
         "footer-texture": "url('/img/footer-texture.png')",
       },
       boxShadow: {
-        search: "5px 5px 7px #1c1d1f, -5px -5px 7px #222527",
+        search: "var(--search-box-shadow)",
       },
     },
   },

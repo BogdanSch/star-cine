@@ -10,6 +10,6 @@
   --color-black: #00040d;
   --color-dark: #1f2123;
   --color-section-bg: #181818;
-  --color-section-bg: #242424;
   --drop-shadow-accent: 3px -6px 60px var(--color-accent-transparent);
+  --search-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
