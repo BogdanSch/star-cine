@@ -44,6 +44,8 @@ export default function ContactForm() {
     if (errors.errorsCount > 0) {
       setFormErrors(errors);
       return;
+    } else {
+      setFormErrors({});
     }
 
     const formData = new FormData(form);

@@ -1,5 +1,4 @@
 import React from "react";
-
 import Image from "../Image";
 
 import OwlCarousel from "react-owl-carousel";
