@@ -1,3 +1,5 @@
+import { setMovies } from "../features/movies/moviesSlice";
+
 const VITE_MOVIE_OMDB_API_KEY = import.meta.env.VITE_MOVIE_OMDB_API_KEY;
 
 const fetchMovieDetails = async (imdbID) => {
@@ -19,12 +21,12 @@ const addAdditionalDataToMovies = async (searchedMovies) => {
   return moviesWithDetails;
 };
 
-const searchMovies = async (movieTitle, setMovies) => {
+const searchMovies = async (movieTitle, dispatch) => {
   try {
     const response = await fetch(`${VITE_MOVIE_OMDB_API_KEY}&s=${movieTitle}`);
     const data = await response.json();
     const searchedMovies = await addAdditionalDataToMovies(data.Search);
-    setMovies(searchedMovies);
+    dispatch(setMovies(searchedMovies));
   } catch (error) {
     throw new Error("No such a movie was found, try again later!");
   }

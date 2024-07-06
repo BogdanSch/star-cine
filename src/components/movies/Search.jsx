@@ -3,16 +3,16 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setSearchTerm } from "../../features/searchTerm/searchTermSlice";
 
-import searchIcon from "../../assets/images/icons/search/SearchButton.svg";
 import { searchMovies } from "../../utils/searchMovies";
+import searchIcon from "../../assets/images/icons/search/SearchButton.svg";
 
 export default function Search(props) {
   const searchTerm = useSelector((state) => state.searchTerm.value);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    searchMovies(searchTerm, props.setMovies);
-  }, []);
+    searchMovies(searchTerm, dispatch);
+  }, [searchTerm, dispatch]);
 
   return (
     <div className="flex flex-row justify-center items-center px-5 py-4 w-[50%] sm:w-[100%] rounded-[1.5rem] border-2 border-white-transparent bg-dark mx-auto mb-10">
@@ -22,14 +22,14 @@ export default function Search(props) {
         value={searchTerm}
         onChange={(event) => dispatch(setSearchTerm(event.target.value))}
         onKeyDown={(event) => {
-          if (event.key === "Enter") searchMovies(searchTerm, props.setMovies);
+          if (event.key === "Enter") searchMovies(searchTerm, dispatch);
         }}
       />
       <img
         className="w-[31px] h-[31px] cursor-pointer"
         src={searchIcon}
         alt="Search Icon"
-        onClick={() => searchMovies(searchTerm, props.setMovies)}
+        onClick={() => searchMovies(searchTerm, dispatch)}
       />
     </div>
   );
