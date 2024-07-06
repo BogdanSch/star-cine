@@ -1,11 +1,14 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import { setSearchTerm } from "../../features/searchTerm/searchTermSlice";
 
 import searchIcon from "../../assets/images/icons/search/SearchButton.svg";
 import { searchMovies } from "../../utils/searchMovies";
 
 export default function Search(props) {
-  const [searchTerm, setSearchTerm] = useState("Star Wars");
+  const searchTerm = useSelector((state) => state.searchTerm.value);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     searchMovies(searchTerm, props.setMovies);
@@ -17,7 +20,7 @@ export default function Search(props) {
         className="flex-1 border-none font-semibold pr-6 outline-none bg-dark text-grey font-raleway"
         placeholder="Search for movies?"
         value={searchTerm}
-        onChange={(event) => setSearchTerm(event.target.value)}
+        onChange={(event) => dispatch(setSearchTerm(event.target.value))}
         onKeyDown={(event) => {
           if (event.key === "Enter") searchMovies(searchTerm, props.setMovies);
         }}
