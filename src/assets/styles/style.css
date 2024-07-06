@@ -170,10 +170,10 @@ body.lock {
 }
 
 .owl-carousel .owl-dots .owl-dot.active span {
-  background-color: var(--color-accent);
+  background-color: var(--color-accent) !important;
 }
 .owl-carousel .owl-dots .owl-dot span {
-  background-color: var(--color-grey);
+  background-color: var(--color-grey) !important;
 }
 /* Modals - Start */
 .slide-out-animation {

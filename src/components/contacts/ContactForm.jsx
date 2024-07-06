@@ -1,5 +1,11 @@
 import React from "react";
-import { useState } from "react";
+
+import { useSelector, useDispatch } from "react-redux";
+import {
+  setShowConfirmModal,
+  setShowErrorModal,
+} from "../../features/showModals/showModalsSlice";
+import { setFormErrors } from "../../features/formErrors/formErrorsSlice";
 
 import Modal from "../modals/Modal";
 import Input from "../Input";
@@ -32,9 +38,9 @@ const isFormValid = (form) => {
 };
 
 export default function ContactForm() {
-  const [showConfirmModal, setShowConfirmModal] = useState(false);
-  const [showErrorModal, setShowErrorModal] = useState(false);
-  const [formErrors, setFormErrors] = useState({});
+  const showModals = useSelector((state) => state.showModals.value);
+  const formErrors = useSelector((state) => state.formErrors.value);
+  const dispatch = useDispatch();
 
   const handleContactFormSubmit = (event) => {
     event.preventDefault();
@@ -42,10 +48,10 @@ export default function ContactForm() {
 
     const errors = isFormValid(form);
     if (errors.errorsCount > 0) {
-      setFormErrors(errors);
-      return;
+      dispatch(setFormErrors(errors));
+      return false;
     } else {
-      setFormErrors({});
+      dispatch(setFormErrors({}));
     }
 
     const formData = new FormData(form);
@@ -55,24 +61,24 @@ export default function ContactForm() {
     formData.append("date", currentDate);
 
     try {
-      setShowConfirmModal(true);
+      dispatch(setShowConfirmModal(true));
       fetch(form.action, {
         method: "POST",
         body: formData,
       }).then((response) => {
         if (response.ok) {
           console.log("Success!");
-          setShowConfirmModal(true);
+          dispatch(setShowConfirmModal(true));
           form.reset();
         } else {
           console.log("Error!");
-          setShowErrorModal(true);
+          dispatch(setShowErrorModal(true));
           form.reset();
         }
       });
     } catch (error) {
       console.error(error);
-      setShowErrorModal(true);
+      dispatch(setShowErrorModal(true));
       form.reset();
     }
   };
@@ -146,15 +152,15 @@ export default function ContactForm() {
         id="successModal"
         modalTitle="Confirmation message"
         modalContent="Your request was successfully sent!"
-        show={showConfirmModal}
-        onHide={() => setShowConfirmModal(false)}
+        show={showModals.showConfirmModal}
+        onHide={() => dispatch(setShowConfirmModal(false))}
       />
       <Modal
         id="errorModal"
         modalTitle="Error message"
         modalContent="There was an error, please try again later!"
-        show={showErrorModal}
-        onHide={() => setShowErrorModal(false)}
+        show={showModals.showErrorModal}
+        onHide={() => dispatch(setShowConfirmModal(false))}
       />
     </>
   );
